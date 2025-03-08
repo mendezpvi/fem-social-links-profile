@@ -1,0 +1,212 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('../assets/fonts/Inter.woff2') format('woff2');
+  font-display: swap;
+  font-style: normal;
+  font-weight: 100 900;
+}
+
+
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+img {
+  max-inline-size: 100%;
+  block-size: auto;
+  font-style: italic;
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* Custom properties */
+:root {
+  --green: hsl(75, 94%, 57%);
+  --white: hsl(0, 0%, 100%);
+  --grey-700: hsl(0, 0%, 20%);
+  --grey-800: hsl(0, 0%, 12%);
+  --grey-900: hsl(0, 0%, 8%);
+  --blue: hsl(228, 45%, 44%);
+  --ff-inter: 'Inter';
+  --radius: .75em;
+}
+
+
+/* Utility classes */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.fs-xs {
+  font-size: .75rem;
+}
+
+.fs-s {
+  font-size: .875rem;
+}
+
+.fs-m {
+  font-size: 1.5rem;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.cl-green {
+  color: var(--green);
+}
+
+
+/* Layout */
+.body {
+  margin: 0;
+  min-block-size: 100vh;
+  min-block-size: 100dvh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  justify-items: center;
+  align-items: center;
+  font-family: var(--ff-inter), sans-serif;
+  font-size: 1rem;
+  background-color: var(--grey-900);
+  color: var(--white);
+  line-height: 1.5;
+}
+
+
+.profile-card {
+  inline-size: 87vw;
+  min-inline-size: 20.4375rem;
+  max-inline-size: 28.5rem;
+  margin-top: 4.6em;
+  padding: 1.5em;
+  text-align: center;
+  background-color: var(--grey-800);
+  border-radius: var(--radius);
+}
+
+.footer {
+  margin-block: 1em;
+}
+
+
+/* Social list */
+.social-links {
+  margin-top: 1.5em;
+  margin-bottom: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 1em;
+  background-color: transparent;
+}
+
+.social__link {
+  --radius: .57em;
+  padding-block: .86em;
+  display: block;
+  background-color: var(--grey-700);
+  border-radius: var(--radius);
+  transition: background-color .2s ease, color .2s ease;
+}
+
+
+/* Picture */
+.profile__picture {
+  inline-size: 5.5rem;
+  block-size: 5.5rem;
+  border-radius: 50%;
+}
+
+
+/* Typography */
+.profile__name {
+  margin-top: 1.05em;
+  margin-bottom: 0;
+}
+
+.profile__location {
+  margin-top: .2em;
+}
+
+.profile__bio {
+  margin-top: 1.71em;
+}
+
+.attribution {
+  text-align: center;
+}
+
+.attribution__link {
+  margin-inline: .3em;
+}
+
+
+/* Media Query */
+@media (width>=48rem) {
+  .profile-card {
+    padding: 2.5em;
+  }
+}
+
+@media (width >=64rem) {
+  .profile-card {
+    max-inline-size: 24rem;
+  }
+}
+
+
+/* States */
+*:focus-visible {
+  outline: 2px dotted var(--green);
+  outline-offset: 2px;
+}
+
+.social__link:focus-visible {
+  background-color: var(--green);
+  color: var(--grey-700);
+}
+
+@media (hover:hover) {
+  .social__link:hover {
+    background-color: var(--green);
+    color: var(--grey-700);
+  }
+
+  .attribution__link:hover {
+    text-decoration: underline wavy;
+  }
+}
