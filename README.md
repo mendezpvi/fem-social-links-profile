@@ -35,7 +35,7 @@ Users should be able to:
 
 [Live site](https://mendezpvi.github.io/fem-social-links-profile/) 👈
 
-<!-- [Solution on Frontend Mentor]() 👈 -->
+[Solution on Frontend Mentor](https://www.frontendmentor.io/solutions/social-links-profile-0Ipy0EoHXH) 👈
 
 [Frontend Mentor Project Showcase](https://github.com/mendezpvi/frontend-mentor-showcase) 👈
 
