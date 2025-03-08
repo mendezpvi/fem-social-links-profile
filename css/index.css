@@ -172,6 +172,9 @@ a {
 
 .attribution__link {
   margin-inline: .3em;
+  text-decoration: underline dotted;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2.5px;
 }
 
 
@@ -200,6 +203,10 @@ a {
   color: var(--grey-700);
 }
 
+.attribution__link:focus-visible {
+  text-decoration: none;
+}
+
 @media (hover:hover) {
   .social__link:hover {
     background-color: var(--green);
@@ -207,6 +214,6 @@ a {
   }
 
   .attribution__link:hover {
-    text-decoration: underline wavy;
+    text-decoration: none;
   }
 }
